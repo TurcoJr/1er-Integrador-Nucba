@@ -1,0 +1,32 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: gray;
+}
+
+header:checked ~ .logo {
+    animation-duration: 3s;
+    transform: rotate(180grad);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+.navlist{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
