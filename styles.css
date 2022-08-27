@@ -62,6 +62,7 @@ main{
 
 #hero{
     display: flex;
+    margin: 30px 0;;
     padding: 70px 0;
     width: 90%;
     justify-content: space-around
@@ -113,14 +114,23 @@ p{
     margin: 25px 0;
 }
 
-h2{
-    margin: 40px 0;
-}
-
 /*SECTION CARDS*/
 
+h2{
+    margin: 40px 0;
+    font-size: 32px;
+    font-style: oblique;
+}
 #products{
+    
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
+}
+.cards{
+    width: 100%;
+    margin: 50px 0;
     display: grid;
     grid-template-columns: 40% 40%;
     grid-gap: 40px;
@@ -142,7 +152,7 @@ h2{
 
 .item1{
     grid-area: item1;
-    background-image: url(./img/resis1.jpg);
+    background-image: url(./img/resist3.jpg);
     background-size: cover;
     background-position: center;
  
@@ -164,7 +174,7 @@ h2{
 }
 .item4{
     grid-area: item4;
-    background-image: url(./img/resist3.jpg);
+    background-image: url(./img/resistencia-electrica.png);
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -199,14 +209,14 @@ h2{
 }
 .c{
     grid-area: c;
-    background-image: url(./img/codensador.jpeg);
+    background-image: url(./img/capa10micro.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 8px;
 }
 .d{
     grid-area: d;
-    background-image: url(./img/resist3.jpg);
+    background-image: url(./img/capaceramico.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -247,7 +257,7 @@ h2{
 }
 .dd{
     grid-area: dd;
-    background-image: url(./img/resist3.jpg);
+    background-image: url(./img/transistor3.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -257,11 +267,10 @@ h2{
 .integrados-container{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 80px 80px 80px;
+    grid-template-rows: 125px 125px;
     grid-template-areas:
     'aaa bbb'
-    'aaa ccc'
-    'aaa ddd';
+    'aaa ccc';
     grid-gap: 10px;
 }
 
@@ -281,15 +290,74 @@ h2{
 }
 .ccc{
     grid-area: ccc;
-    background-image: url(./img/bc547-transistor.jpg);
+    background-image: url(./img/ci4.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 8px;
 }
-.ddd{
-    grid-area: ddd;
-    background-image: url(./img/resist3.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+
+
+/*LOGIN PAGE*/
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container .inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container a{
+    margin: 10px;
+}
+
+.login-container a button{
+    margin: 30px;
+    padding: 8px;
+    background-color: var(--blue);
+    color: var(--whited);
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid var(--orange);
+    cursor: pointer;
+}
+
+/*REGISTER PAGE*/
+.register-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container .inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs label{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.inputs input{
+    padding: 3px;
+    font-size: 17px;
+    color: black;
+
+}
+
+.register-container a button{
+    margin: 30px;
+    padding: 8px;
+    background-color: var(--blue);
+    color: var(--whited);
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid var(--orange);
+    cursor: pointer;
 }
