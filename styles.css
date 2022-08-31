@@ -84,12 +84,23 @@ p{
     margin: 10px 0;
     gap: 20px;
 }
-.button-container a{
+
+.button{
+    margin: 30px 5px;
     text-decoration: none;
     border: 3px solid var(--orange);
     border-radius: 18px;
     padding: 5px 18px;
     color: var(--whited);
+}
+
+.button:active{
+    background-color: var(--blue);
+    color: var(--whited);
+    border: 1px solid var(--orange);
+    font-weight: 700;
+    font-size: 15px;
+    align-items: center;
 }
 
 #hero img{
@@ -314,17 +325,6 @@ h2{
     margin: 10px;
 }
 
-.login-container a button{
-    margin: 30px;
-    padding: 8px;
-    background-color: var(--blue);
-    color: var(--whited);
-    font-weight: 700;
-    font-size: 15px;
-    border-radius: 7px;
-    border: 1px solid var(--orange);
-    cursor: pointer;
-}
 
 /*REGISTER PAGE*/
 .register-container{
@@ -350,14 +350,37 @@ h2{
 
 }
 
-.register-container a button{
-    margin: 30px;
-    padding: 8px;
+
+/* FOOTER */
+
+footer{
     background-color: var(--blue);
-    color: var(--whited);
-    font-weight: 700;
+    text-align: center;
+    margin: 60px;
+}
+
+#work{
+    padding: 20px;
+
+}
+
+.redes a{
+    margin: 30px;
+    font-size: 25px;
+}
+
+.right-reserved{
+    margin-top: 20px;
+}
+
+.copiright1{
+    color: var(--orange);
+    font-size: 20px;
+    margin: 8px;
+}
+
+.copiright{
+    color: var(--marine);
     font-size: 15px;
-    border-radius: 7px;
-    border: 1px solid var(--orange);
-    cursor: pointer;
+    margin: 5px;
 }
