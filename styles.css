@@ -10,8 +10,8 @@ body{
 }
 
 :root{
-	--marine: #112B3C;
-	--blue: #205375;
+	--marine: rgb(17, 43, 60);
+	--blue: rgb(32, 83, 117);
     --orange: #F66B0E;
 	--whited: #EFEFEF;
     --medium: 700;
@@ -31,13 +31,26 @@ header{
     padding: 0px 70px;
 }
 
-header img {
-    height: 80%;
+.logo {
+    height: 95%;
+    max-height: 150px;
 }
 /*  header:checked ~ .logo {
     animation-duration: 3s;
     transform: rotate(180grad);
 } */
+
+.menu-toggle{
+    display: none;
+}
+.menu-button{
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 0 25px;
+}
+
+
 
 .navlist{
     list-style: none;
@@ -52,6 +65,40 @@ header img {
     font-weight: 600;
     font-size: 20px;
 }
+.navbar-link:hover{
+    color: var(--orange);
+
+}
+
+@media (max-width: 930px) {
+    .navlist{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+
+    #hero img{
+        display: none;
+    }
+    .menu-toggle:checked + .navlist{
+        display: block;
+        position: absolute;
+        top: 120px;
+        left: 15%;
+        width: 70%;
+        height: 50vh;
+        background-color: var(--orange);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }    
+    .navbar-link:hover{
+        color: var(--blue);
+    }
+}
+
 
 main{
     display: flex;
@@ -93,13 +140,13 @@ p{
     padding: 5px 18px;
     color: var(--whited);
 }
-
-.button:active{
+.button:hover{
     background-color: var(--blue);
+}
+.button:active{
+    background-color: var(--marine);
     color: var(--whited);
-    border: 1px solid var(--orange);
     font-weight: 700;
-    font-size: 15px;
     align-items: center;
 }
 
@@ -122,7 +169,7 @@ p{
     background-color: var(--orange);
     width: 50%;
     height: 3px;
-    margin: 25px 0;
+    margin: 35px 0;
 }
 
 /*SECTION CARDS*/
@@ -144,9 +191,8 @@ h2{
     margin: 50px 0;
     display: grid;
     grid-template-columns: 40% 40%;
-    grid-gap: 40px;
+    grid-gap: 50px;
     justify-content: center;
-    align-items: stretch;
 }
 
 .resistencias-container{
@@ -201,7 +247,6 @@ h2{
     'a c'
     'a d';
     grid-gap: 10px;    
-    margin-bottom: 80px;
 }
 
 .a{
@@ -307,6 +352,84 @@ h2{
     border-radius: 8px;
 }
 
+.leds{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 125px 125px;
+    grid-template-areas:
+    'uno dos'
+    'uno tres';
+    grid-gap: 10px;
+}
+
+
+.uno{
+    grid-area: uno;
+    background-image: url(./img/leds.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.dos{
+    grid-area: dos;
+    background-image: url(./img/leds2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.tres{
+    grid-area: tres;
+    background-image: url(./img/fusible.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.varios{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+    grid-template-areas:
+    'unos doses'
+    'unos treses'
+    'unos cuatros';
+    grid-gap: 10px;
+}
+
+
+.unos{
+    grid-area: unos;
+    background-image: url(./img/multimetro.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.doses{
+    grid-area: doses;
+    background-image: url(./img/fusible.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.treses{
+    grid-area: treses;
+    background-image: url(./img/diodos.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.cuatros{
+    grid-area: cuatros;
+    background-image: url(./img/inductores.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
 
 /*LOGIN PAGE*/
 
@@ -357,11 +480,11 @@ footer{
     background-color: var(--blue);
     text-align: center;
     margin: 60px;
+    max-height: 150px;
 }
 
 #work{
     padding: 20px;
-
 }
 
 .redes a{
@@ -369,8 +492,8 @@ footer{
     font-size: 25px;
 }
 
-.right-reserved{
-    margin-top: 20px;
+.redes{
+    margin-bottom: 15px;
 }
 
 .copiright1{
