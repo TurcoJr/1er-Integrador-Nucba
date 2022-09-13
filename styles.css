@@ -27,22 +27,18 @@ header{
     width: 100%;
     height: 90px;
     background-color: var(--blue);
-    /* margin: 0 auto; */
-    padding: 0px 70px;
+    padding: 0px 70px;    
 }
 
 .logo {
-    height: 95%;
+    height: 98%;
     max-height: 150px;
 }
-/*  header:checked ~ .logo {
-    animation-duration: 3s;
-    transform: rotate(180grad);
-} */
 
 .menu-toggle{
     display: none;
 }
+
 .menu-button{
     display: none;
     cursor: pointer;
@@ -85,8 +81,8 @@ header{
         display: block;
         position: absolute;
         top: 120px;
-        left: 15%;
-        width: 70%;
+        left: 20%;
+        width: 60%;
         height: 50vh;
         background-color: var(--orange);
         display: flex;
@@ -172,263 +168,279 @@ p{
     margin: 35px 0;
 }
 
+
+
 /*SECTION CARDS*/
 
-h2{
-    margin: 40px 0;
-    font-size: 32px;
-    font-style: oblique;
-}
 #products{
-    
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap;
     align-items: center;
 }
-.cards{
-    width: 100%;
-    margin: 50px 0;
-    display: grid;
-    grid-template-columns: 40% 40%;
-    grid-gap: 50px;
-    justify-content: center;
+
+h2{
+    margin: 40px;
+    font-size: 40px;
 }
 
-.resistencias-container{
-    
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 80px 80px 80px;
-    grid-template-areas:
-    'item1 item2'
-    'item1 item3'
-    'item1 item4';
-    grid-gap: 10px;
-}
-
-.item1{
-    grid-area: item1;
-    background-image: url(./img/resist3.jpg);
-    background-size: cover;
-    background-position: center;
- 
-    border-radius: 8px;
-}
-.item2{
-    grid-area: item2;
-    background-image: url(./img/resistencia.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-.item3{
-    grid-area: item3;
-    background-image: url(./img/resis2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
-}
-.item4{
-    grid-area: item4;
-    background-image: url(./img/resistencia-electrica.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.cards-conatiner{
+    font-family: 'Roboto', sans-serif;
+	width: 100%;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+    gap: 25px;
 }
 
 
-.capacitores-container{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 80px 80px 80px;
-    grid-template-areas:
-    'a b'
-    'a c'
-    'a d';
-    grid-gap: 10px;    
+.box {
+    margin: 10px;
+    width: 300px;
+    height: 490px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%);
 }
 
-.a{
-    grid-area: a;
-    background-image: url(./img/capacitores.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
+.box .titulo {
+	color: #fff;
+	padding: 25px;
+	margin-top: 100px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 35px;
+	background: rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    cursor: pointer;
 }
-.b{
-    grid-area: b;
-    background-image: url(./img/codensador.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-.c{
-    grid-area: c;
-    background-image: url(./img/capa10micro.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-.d{
-    grid-area: d;
-    background-image: url(./img/capaceramico.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.nine .titulo{
+    color: #fff;
+	padding: 30px 0;
+	margin-top: 100px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 30px;
+	background: rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    cursor: pointer;
 }
 
-
-.transistores-container{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 80px 80px 80px;
-    grid-template-areas:
-    'aa bb'
-    'aa cc'
-    'aa dd';
-    grid-gap: 10px;
+.nucba{
+    color: black;
+    font-weight: 550;
 }
 
-.aa{
-    grid-area: aa;
-    background-image: url(./img/transistores.png);
+.poster {
+    width: 130px;
+    height: 130px;
+    margin: 80px auto;
+    position: relative;
+    border-radius: 100px;
+}
+
+.poster .h4 {
+	top: 16px;
+	color: #fff;
+	position: relative;
+	font-size: 80px;
+	text-align: center;
+	font-weight: 100;
+}
+
+.one {
+    background: url(./img/resist3.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 8px;
-}
-.bb{
-    grid-area: bb;
-    background-image: url(./img/tipos-transistores.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-.cc{
-    grid-area: cc;
-    background-image: url(./img/bc547-transistor.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-.dd{
-    grid-area: dd;
-    background-image: url(./img/transistor3.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
 }
 
-
-.integrados-container{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 125px 125px;
-    grid-template-areas:
-    'aaa bbb'
-    'aaa ccc';
-    grid-gap: 10px;
+.two {
+	background: url(./img/codensador.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.three {
+	background: url(./img/tipos-transistores.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-.aaa{
-    grid-area: aaa;
-    background-image: url(./img/integradoss.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-.bbb{
-    grid-area: bbb;
-    background-image: url(./img/circuito-integrado.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-.ccc{
-    grid-area: ccc;
-    background-image: url(./img/ci4.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.four {
+    background: url(./img/transformadores.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-.leds{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 125px 125px;
-    grid-template-areas:
-    'uno dos'
-    'uno tres';
-    grid-gap: 10px;
+.five {
+	background: url(./img/integradoss.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.six {
+	background: url(./img/leds2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.seven {
+	background: url(./img/diodos.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.eight {
+	background: url(./img/inductor.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.nine {
+	background: url(./img/potenciometro.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.ten {
+	background: url(./img/Rele_opt.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.eleven {
+	background: url(./img/fusible.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-
-.uno{
-    grid-area: uno;
-    background-image: url(./img/leds.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.tlv {
+	background: url(./img/tester.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-.dos{
-    grid-area: dos;
-    background-image: url(./img/leds2.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.p1 {
+	background: #2b5876;  /* fallback for old browsers */
+	background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 20px darkblue;
 }
 
-.tres{
-    grid-area: tres;
-    background-image: url(./img/fusible.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.p2 {
+	background: #f857a6;  /* fallback for old browsers */
+	background: linear-gradient(to right, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 20px #fa3380;
 }
 
-.varios{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 80px 80px 80px;
-    grid-template-areas:
-    'unos doses'
-    'unos treses'
-    'unos cuatros';
-    grid-gap: 10px;
+.p3 {
+	background: #4776E6;  /* fallback for old browsers */
+	background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px lightblue;
+}
+
+.p4 {
+	background: #1FA2FF;  /* fallback for old browsers */
+	background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 20px skyblue;
 }
 
 
-.unos{
-    grid-area: unos;
-    background-image: url(./img/multimetro.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.p5 {
+	background: #AA076B;  /* fallback for old browsers */
+	background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px purple;
 }
 
-.doses{
-    grid-area: doses;
-    background-image: url(./img/fusible.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.p6 {
+	background: #DA22FF;  /* fallback for old browsers */
+	background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px violet;
 }
 
-.treses{
-    grid-area: treses;
-    background-image: url(./img/diodos.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.p7 {
+	background: #02AAB0;  /* fallback for old browsers */
+	background: linear-gradient(to right, #00CDAC, #02AAB0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px lightgreen;
+}
+.p8 {
+	background: #5433FF;  /* fallback for old browsers */
+	background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px lightblue;
+}
+.p9 {
+	background: #2b5876;  /* fallback for old browsers */
+	background: linear-gradient(to right, #fa3, #fa3380); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px #fa3380;
 }
 
-.cuatros{
-    grid-area: cuatros;
-    background-image: url(./img/inductores.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+.p10 {
+	background: #2b5876;  /* fallback for old browsers */
+	background: linear-gradient(to right, deepskyblue, lightblue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px darkblue;
+}
+
+.p11 {
+	background: #F2994A;  /* fallback for old browsers */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px lightyellow;
+}
+
+.p12 {
+	background: #A770EF;  /* fallback for old browsers */
+	background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px purple;
+}
+
+.p13 {
+	background: #f4c4f3;  /* fallback for old browsers */
+	background: linear-gradient(to right, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px pink;
+}
+.p14 {
+	background: #00c3ff;  /* fallback for old browsers */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px olive;
+}
+.p15 {
+	background: #5614B0;  /* fallback for old browsers */
+	background: linear-gradient(to right, #DBD65C, #5614B0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px olive;
+}
+
+.p16 {
+	background: #fc00ff;  /* fallback for old browsers */
+	background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0 0 20px olive;
+}
+
+
+/*  FOLLOW*/
+.Follow {	  background:url("https://pbs.twimg.com/profile_images/959092900708544512/v4Db9QRv_bigger.jpg")no-repeat center / contain;
+	width: 50px;
+	height: 50px;
+	bottom: 9px;
+	right: 20px;
+	display:block;
+	position:fixed;
+	border-radius:50%;
+	z-index:999;
+	animation:  rotation 10s infinite linear;
+	}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }
 
 /*LOGIN PAGE*/
@@ -492,9 +504,32 @@ footer{
     font-size: 25px;
 }
 
+.redes a i{
+    animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation{
+0%{
+    transform: rotate(0deg);
+}
+10%{
+    transform: rotate(359deg);    
+}
+50%{
+    transform: rotate(359deg); 
+}
+60% {
+    transform: rotate(0deg);
+} 
+100%{
+    transform: rotate(0deg);
+}
+}
+
 .redes{
     margin-bottom: 15px;
 }
+
 
 .copiright1{
     color: var(--orange);
